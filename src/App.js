@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Example from './components/noteList';
+import NoteList from './components/noteList';
 
 function App() {
   return (
     <div className="App">
-      <Example/>
+      <NoteList/>
       notes app using react hooks
 
     </div>
