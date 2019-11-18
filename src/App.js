@@ -1,41 +1,30 @@
+// import React, {useState} from 'react';
 import React, {useState} from 'react';
 import './App.css';
-
-// import NoteList from './components/noteList';
-
-// how to passthrough obj
-// const [form, setValues] = useState({
-//   username: '',
-//   password: ''
-// });
+import NoteList from './components/noteList';
 
 const initialState = {
-  str: 'post'
+  notes: [],
+  note: {},
+  title: '',
+  text: ''
 }
 
 function App() {
-  const [resource, setResource] = useState(initialState);
-  
-  
-  // const add1ToCounter = () => {
-  //   const newCounterValue = state.resource + 1;
-  //   setResource({resource: newCounterValue});
-  // }
+  const [text, setTextBody] = useState(initialState);
+ 
 
-  const post = str => {
-    // e.preventDefault();
-    setResource({str: str})
+  const onChange = ev => {
+    ev.preventDefault();
+    setTextBody({[ev.target.name]: ev.target.value})
   }
-  
+
+
   return (
-    <div>
-      <div>
-        <button onClick={() => post('post')}>Post</button>
-        <button onClick={() => post('todos')}>Todos</button>
-      </div>
-      {resource.str}
-    </div>
+    <div>Rendering</div>
   );
 }
 
 export default App;
+ 
+
