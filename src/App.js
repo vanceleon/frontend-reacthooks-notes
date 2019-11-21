@@ -19,6 +19,8 @@ function App() {
     setTextBody({[ev.target.name]: ev.target.value})
   }
 
+  console.log("this is a test git")
+
 
   return (
     <div>Rendering</div>
@@ -27,4 +29,3 @@ function App() {
 
 export default App;
  
-
